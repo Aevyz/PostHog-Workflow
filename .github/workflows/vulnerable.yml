@@ -33,4 +33,4 @@ jobs:
           allow-unsafe-pr-checkout: true
 
       - name: Assign reviewers
-        run: node ./assign-reviewers.js
+        run: node ./scripts/assign-reviewers.js
