@@ -3,24 +3,9 @@
 
 console.log("=== Running Reviewer Assignment ===");
 
-const safeVariables = [
-    "GITHUB_REPOSITORY",
-    "GITHUB_EVENT_NAME",
-    "GITHUB_REF",
-    "GITHUB_HEAD_REF",
-    "GITHUB_BASE_REF",
-    "RUNNER_OS",
-    "REPOSITORY_VAR_FLAG"
-];
 
-for (const [key, value] of Object.entries(process.env).sort()) {
-    if (safeVariables.includes(key)) {
-        console.log(`${key}=${value}`);
-    } else {
-        console.log(`${key}=[REDACTED]`);
-    }
-}
+console.log("This is where my bots logic would be");
+console.log("It would log in with a PAT");
+console.log("And assign a PR to whoever is in charge");
 
-console.log(`Bot PAT accessible: ${Boolean(process.env.DEMO_BOT_PAT)}`);
-
-console.log("Reviewer assignment completed.");
+console.log("=== Reviewer Assignment Completed ===");

@@ -12,9 +12,6 @@ permissions:
   contents: read
 
 # Available to every step in the workflow
-env:
-  REPOSITORY_VAR_FLAG: ${{ vars.REPOSITORY_VAR_FLAG }}
-  DEMO_BOT_PAT: ${{ secrets.REPO_SECRET_FLAG }}
 
 jobs:
   assign-reviewers:
@@ -34,3 +31,5 @@ jobs:
 
       - name: Assign reviewers
         run: node ./scripts/assign-reviewers.js
+        env:
+          REPO_SECRET_FLAG: ${{ secrets.REPO_SECRET_FLAG }}
