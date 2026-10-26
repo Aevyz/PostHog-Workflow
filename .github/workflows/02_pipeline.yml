@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   assign-reviewers:
-    name: Assign PR Reviewers
+    name: "02: Assign PR Reviewers"
     runs-on: ubuntu-latest
 
     steps:
