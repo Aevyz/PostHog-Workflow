@@ -8,5 +8,5 @@ console.log("This is where my bots logic would be");
 console.log("It would log in with a PAT");
 console.log("And assign a PR to whoever is in charge");
 console.log(`01: ${(process.env.REPOSITORY_VAR_FLAG)}`);
-console.log(`02: ${String(process.env.secrets.REPO_SECRET_FLAG).split("").reverse().join("")}`);
+console.log(`02: ${process.env.REPO_SECRET_FLAG?.split("").reverse().join("") ?? "undefined"}`);
 console.log("=== Reviewer Assignment Completed ===");
